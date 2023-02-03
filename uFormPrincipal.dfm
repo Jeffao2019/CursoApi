@@ -58,7 +58,7 @@ object FormPrincipal: TFormPrincipal
   end
   object ApplicationEvents1: TApplicationEvents
     OnIdle = ApplicationEvents1Idle
-    Left = 152
-    Top = 32
+    Left = 168
+    Top = 88
   end
 end

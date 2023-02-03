@@ -40,7 +40,7 @@ begin
       pQuery.Sql.Text:=pSQL;
       pQuery.ExecSQL;
       pCon.Commit;
-      Result:='Sucesso';
+      Result:='Sucesso!';
     except
       on E: Exception do begin
         Result:=E.Message;
