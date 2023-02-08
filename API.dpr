@@ -8,7 +8,8 @@ uses
   uFormPrincipal in 'uFormPrincipal.pas' {FormPrincipal},
   usmPrincipal in 'usmPrincipal.pas' {smPrincipal: TDSServerModule},
   uwmPrincipal in 'uwmPrincipal.pas' {wbPrincipal: TWebModule},
-  uDAO in 'uDAO.pas';
+  uDAO in 'uDAO.pas',
+  uTables in 'uTables.pas';
 
 {$R *.res}
 

@@ -9,9 +9,10 @@ type
   TDAO = Class
   private
     class procedure Connect(const pCon:TFDConnection);static;
-    class procedure Disconnect(const pCon:TFDConnection);static;
   public
+    class procedure Disconnect(const pCon:TFDConnection);static;
     class function ExecSQL(pSQL: string; const pCon:TFDConnection; const pQuery:TFDQuery):String;static;
+    class procedure getData(pSQL: string; const pCon:TFDConnection; const pQuery:TFDQuery);Static;
   end;
 
 
@@ -49,6 +50,15 @@ begin
   finally
     Disconnect(pCon);
   end;
+end;
+
+class procedure TDAO.getData(pSQL: string; const pCon: TFDConnection; const pQuery: TFDQuery);
+begin
+  Connect(pCon);
+  pQuery.Close;
+  pQuery.Sql.Clear;
+  pQuery.Sql.Text:=pSQL;
+  pQuery.Open;
 end;
 
 end.
